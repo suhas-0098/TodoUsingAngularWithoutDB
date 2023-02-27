@@ -1,0 +1,34 @@
+<!-- <h1 class="text-center mt-4 mb-4">To-do List</h1>
+<div class="row">
+  <div class="col-6 mx-auto">
+    <ul class="list-group">
+      <li class="list-group-item">
+        <input type="checkbox" name="todoCompleted" />
+        new item
+         *ngFor="let todo of todos; index as i" -->
+
+<!-- <button class="btn btn-danger right">&#215;</button> -->
+
+<!-- (click)="removeTodo(i)" -->
+<!-- </li>
+    </ul>
+  </div>
+</div> -->
+
+<div class="card col-6 mx-auto mt-4">
+  <div class="card-body">
+    <h5 class="card-title">Todo List</h5>
+  </div>
+  <ul
+    class="list-group list-group-flush"
+    *ngFor="let tl of taskList; index as i"
+    [class.completed]="tl.isCompleted"
+    (selected)="(tl.isCompleted)"
+    (selectedChange)="changeTaskStatus(i)"
+    togglePosition="before"
+  >
+    <li class="list-group-item">
+      {{ tl.title }}
+    </li>
+  </ul>
+</div>

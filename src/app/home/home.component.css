@@ -1,0 +1,7 @@
+.right {
+  float: right;
+}
+
+.completed {
+  text-decoration: line-through;
+}

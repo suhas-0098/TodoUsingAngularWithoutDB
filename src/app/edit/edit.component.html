@@ -1,0 +1,28 @@
+<form>
+  <div class="card col-6 mx-auto mt-4">
+    <!-- <ul class="list-group list-group-flush"> -->
+
+    <input class="mt-2" type="text" #inputAdd />
+    <button class="btn btn-success mt-2" (click)="addddTask(inputAdd.value)">
+      Add
+    </button>
+
+    <!-- </ul> -->
+
+    <div class="card-body">
+      <h5 class="card-title">Todo List</h5>
+    </div>
+    <ul
+      class="list-group list-group-flush"
+      *ngFor="let tl of tasksList; index as i"
+    >
+      <li class="list-group-item">
+        {{ tl.title }}
+
+        <button class="btn btn-danger right" (click)="DeleteTask(i)">
+          Delete
+        </button>
+      </li>
+    </ul>
+  </div>
+</form>
